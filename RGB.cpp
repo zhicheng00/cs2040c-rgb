@@ -15,3 +15,15 @@ void RGB::print() {
   std::cout << "RGB(" << red_ << ", " << green_ << ", " << blue_ << ")"
     << std::endl;
 }
+
+RBG RGB::mix(const RGB& c) {
+  return RGB((red_+c.red_)/2, (green_+c.green_)/2, (blue_+c.blue_)/2);
+}
+
+RBG RGB::operator+(const RGB& c) {
+  return RGB((red_+c.red_)/2, (green_+c.green_)/2, (blue_+c.blue_)/2);
+}
+
+RBG RGB::brighten(const RGB& c) {
+  return RGB((red_+c.red_)/2, (green_+c.green_)/2, (blue_+c.blue_)/2);
+}

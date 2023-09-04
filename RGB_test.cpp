@@ -24,4 +24,13 @@ TEST(RGBTest, Print) {
   rgb.print();
 }
 
+TEST(RGBTest, Mix) {
+  RGB rgb(240, 0, 0);
+  RGB rgb2(0, 0, 220);
+  RGB rgb3 = rgb.mix(rgb2);
+  EXPECT_EQ(120, rgb3.red());
+  EXPECT_EQ(0, rgb3.green());
+  EXPECT_EQ(110, rgb3.blue());
+}
+
 }  // namespace testing

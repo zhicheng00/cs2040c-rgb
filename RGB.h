@@ -16,6 +16,12 @@ public:
   int blue() const { return blue_; }
 
   void print();
+
+  RBG mix(const RGB& c);
+
+  RBG operator+(const RGB& c);
+
+  RBG brighten(const RGB& c);
 };
 
 #endif  // EXAMPLE_RGB_H
